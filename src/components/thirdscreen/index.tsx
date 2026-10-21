@@ -10,7 +10,15 @@ function ThirdScreen({ onNext }: Props) {
     return (
         <div className="relative w-full h-screen">
             <div className="absolute w-full h-screen z-10">
-                <video src={background} autoPlay loop muted className="object-cover w-full h-full"></video>
+                <video
+                    src={background}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls={false}
+                    disablePictureInPicture
+                    className="object-cover w-full h-full"></video>
             </div>
 
             <div className="absolute z-20 flex flex-col justify-center items-center w-full h-screen">
@@ -22,8 +30,6 @@ function ThirdScreen({ onNext }: Props) {
                         title="Click the cake!"
                     >
                         <img src={cake} className="h-full w-full object-cover" alt="Click me!" />
-                        {/* Subtle hint pulse ring */}
-                        {/* <span className="absolute inset-0 rounded-full animate-ping opacity-30 bg-pink-400 pointer-events-none" /> */}
                     </div>
                 </div>
             </div>
